@@ -4,21 +4,24 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
-<script>		
-		//实现滚动条无法滚动
+<script>
+setTimeout(function(){  
+    document.body.scrollTop = document.body.scrollHeight;  
+},300); 
+/*		//实现滚动条无法滚动
 var mo=function(e){e.preventDefault();};
 
-/***禁止滑动***/
+//禁止滑动
 function stop(){
         document.body.style.overflow='hidden';        
         document.addEventListener("touchmove",mo,false);//禁止页面滑动
 }
 
-/***取消滑动限制***/
+//取消滑动限制
 function move(){
         document.body.style.overflow='';//出现滚动条
         document.removeEventListener("touchmove",mo,false);        
-}
+}*/
 </script>
 		<style type="text/css">
 			*{padding: 0;margin: 0;}
