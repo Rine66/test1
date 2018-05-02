@@ -9,7 +9,7 @@ window.onresize = function () {
     if (document.activeElement.tagName == "input" || document.activeElement.tagName == "textarea") {
         setTimeout(function () {
             var top = document.activeElement.getBoundingClientRect().top;
-            window.scrollTo(0,top);
+            window.scrollTo(0,0);
         }, 0);
     }
 }
