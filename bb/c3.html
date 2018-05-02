@@ -4,19 +4,51 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
+		<style type="text/css">
+		</style>
+		<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
 <script>
-window.onresize = function () {
+	 $(document).ready(function(){
+//		$("button").click(function(){
+		$(window).on("resize",function(){
+//			$("html").scrollTop(0);
+
+			var doH=$(document).height();//获取文档高度
+			var winH=$(window).height();  //获取窗口高度
+			if(doH>=winH){
+				$("html").scrollTop(0);
+				console.log("ff")
+			}
+		});
+	});
+	 /*$(function(){
+			resizeBoxe();
+			$("button").on("click",resizeBoxe);//窗口绑定resize()事件，窗口大小发生改变时即触发函数
+			function resizeBoxe(){
+				var doH=$(document).height();//获取文档高度
+				var winH=$(window).height();  //获取窗口高度
+				$(".con").scrollTop(100);
+				if(doH>=winH){
+					$(".con").scrollTop(0);
+					console.log("ff")
+				}
+//				$(".box").height(maxheight);  //设置高度
+			}
+		})*/
+	 
+	 
+/*window.onresize = function () {
     if (document.activeElement.tagName == "input" || document.activeElement.tagName == "textarea") {
         setTimeout(function () {
             var top = document.activeElement.getBoundingClientRect().top;
             window.scrollTo(0,0);
         }, 300);
     }
-}
+}*/
 </script>
 		<style type="text/css">
 			*{padding: 0;margin: 0;}
-			/*body{overflow: hidden;}*/
+			/*.con{overflow: auto;}*/
 			.content{margin: 10px 10px;}
 			input{height: 40px;width: 100%;}
 			.cc{    width: 374px;
@@ -25,8 +57,8 @@ window.onresize = function () {
 		</style>
 	</head>
 	<body>
-		<img src="img/b.png"/>
 		
+		<img src="img/b.png"/>
 		<div class="content">
 			手机<input type="text" name="" id="" value="" />
 		</div>
@@ -42,5 +74,6 @@ window.onresize = function () {
 		<div class="content">
 			<input type="button" name="" id="" value="注册" style="margin-top: 45px;" />
 		</div>
+		<button>垂直滚动条的位置设置为100px</button>
 	</body>
 </html>
