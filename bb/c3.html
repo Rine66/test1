@@ -10,17 +10,22 @@
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	 $(document).ready(function(){
+	 	var oldH=$(document).height();
 //		$("button").click(function(){
 		$(window).on("resize",function(){
 //			$("html").scrollTop(0);
 
 			var doH=$(document).height();//获取文档高度
 			var winH=$(window).height();  //获取窗口高度
-			if(doH<=winH){
-				var top = document.activeElement.getBoundingClientRect().top;
-				$("html").scrollTop(top);
+			if(doH>oldH){
+				alert("新文档高度大于原文档高度")
+			}
+			if(doH<=oldH){
+				alert("新文档高度小于、等于原文档高度")
+//				var top = document.activeElement.getBoundingClientRect().top;
+				$("html").scrollTop(0);
 				console.log("ff");
-				alert("ff")
+//				alert("ff")
 			}
 		});
 	});
