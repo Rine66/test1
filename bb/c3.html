@@ -17,7 +17,8 @@
 			var doH=$(document).height();//获取文档高度
 			var winH=$(window).height();  //获取窗口高度
 			if(doH<=winH){
-				$("html").scrollTop(-20);
+				var top = document.activeElement.getBoundingClientRect().top;
+				$("html").scrollTop(top);
 				console.log("ff");
 				alert("ff")
 			}
