@@ -30928,7 +30928,7 @@ page-register .item {
 
 page-register .scroll-content {
   contain: none;
-  /*overflow-y: hidden;*/
+  overflow-y: scroll;
   will-change: auto;
   position: relative;
   background-color: #f67575;
