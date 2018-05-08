@@ -30928,8 +30928,8 @@ page-register .item {
 
 page-register .scroll-content {
   contain: none;
-  will-change: auto;
-  background-color: #f67575;
+  /*will-change: auto;*/
+  background-color: yellow;
 }
 
 page-register ion-content {
@@ -30944,13 +30944,13 @@ page-register .buttonstyle {
   margin-top: 20px;
 }
 
-page-register ion-content {
+/*page-register ion-content {
   position: static !important;
 }
 
 page-register ion-content {
   height: auto;
-}
+}*/
 
 page-register .image img {
   width: 100%;
