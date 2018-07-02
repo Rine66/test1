@@ -50,8 +50,8 @@ body {
 }
 #select {
 	position: absolute;
-	left: 0;
-	top: 0;
+    left: 30%;
+    top: 30%;
 	width: 200px;
 	height: 200px;
 	border: 2px solid #6f0;
@@ -137,6 +137,7 @@ body {
 <!--
 	本次公开课节选自《妙味移动端原生技法精粹揭秘》远程课程，想要了解详情的同学可以访问：http://www.miaov.com/index.php/news/newsDetail/nid/155 查看课程详情。三周的系统课程，带你玩转原生H5移动端web开发
 -->
+<script type="text/javascript" src="MTween.js"></script>
 <script type="text/javascript">
 console.log('本次公开课节选自《妙味移动端原生技法精粹揭秘》远程课程，想要了解详情的同学可以访问：http://www.miaov.com/index.php/news/newsDetail/nid/155 查看课程详情。三周的系统课程，带你玩转原生H5移动端web开发');
  
@@ -323,7 +324,87 @@ console.log('本次公开课节选自《妙味移动端原生技法精粹揭秘�
 						isResize = false;
 					}
 				});
-				
+				/*// 右上角 
+				var rightTop = document.querySelector('.right-top');
+				drag({
+					el:rightTop,
+					start: function(){
+						isResize = true;
+						startSelect = {
+							y: css(select,"translateY"),
+							w: css(select,"width"),
+							h: css(select,"height")
+						};
+					},
+					move: function(e){
+						var width = startSelect.w + e.disPoint.x;
+						var height = startSelect.h - e.disPoint.y;
+						if(width > minW){
+							css(select,"width",width);
+						}
+						if(height > minH){
+							css(select,"height",height);
+							css(select,"translateY",startSelect.y + e.disPoint.y);
+						}
+					},
+					end: function(){
+						isResize = false;
+					}
+				});
+ 
+				// 右下角 
+				var rightBottom = document.querySelector('.right-bottom');
+				drag({
+					el:rightBottom,
+					start: function(){
+						isResize = true;
+						startSelect = {
+							w: css(select,"width"),
+							h: css(select,"height")
+						};
+					},
+					move: function(e){
+						var width = startSelect.w + e.disPoint.x;
+						var height = startSelect.h + e.disPoint.y;
+						if(width > minW){
+							css(select,"width",width);
+						}
+						if(height > minH){
+							css(select,"height",height);
+						}
+					},
+					end: function(){
+						isResize = false;
+					}
+				});
+ 
+				//左下角 
+				var leftBottom = document.querySelector('.left-bottom');
+				drag({
+					el:leftBottom,
+					start: function(){
+						isResize = true;
+						startSelect = {
+							x: css(select,"translateX"),
+							w: css(select,"width"),
+							h: css(select,"height")
+						};
+					},
+					move: function(e){
+						var width = startSelect.w - e.disPoint.x;
+						var height = startSelect.h + e.disPoint.y;
+						if(width > minW){
+							css(select,"width",width);
+							css(select,"translateX",startSelect.x + e.disPoint.x);
+						}
+						if(height > minH){
+							css(select,"height",height);
+						}
+					},
+					end: function(){
+						isResize = false;
+					}
+				});*/
  
 			};
 			page[1].className = "page";
