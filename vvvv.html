@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no" />
-<meta name="description" content="本次公开课节选自《妙味移动端原生技法精粹揭秘》远程课程，想要了解详情的同学可以访问：http://www.miaov.com/index.php/news/newsDetail/nid/155 查看课程详情。三周的系统课程，带你玩转原生H5移动端web开发">
 <meta charset="UTF-8">
 <title>Document</title>
 <style type="text/css">
-body {
+/*body {
 	margin: 0;
 }	
 html,
 body {
 	height: 100%;
-}
-.wrap {
+}*/
+/*.wrap {
 	position: relative;
 	height: 100%;
 	overflow: hidden;
-}
+}*/
 .page {
 	position: absolute;
 	left: 0;
@@ -66,33 +65,8 @@ body {
 	border-left: 4px solid #6f0;
 	border-top: 4px solid #6f0;
 }
-.right-top {
-	position: absolute;
-	right: -4px;
-	top: -4px;
-	width: 40px;
-	height: 40px;
-	border-right: 4px solid #6f0;
-	border-top: 4px solid #6f0;
-}
-.left-bottom {
-	position: absolute;
-	left: -4px;
-	bottom: -4px;
-	width: 40px;
-	height: 40px;
-	border-left: 4px solid #6f0;
-	border-bottom: 4px solid #6f0;
-}
-.right-bottom {
-	position: absolute;
-	right: -4px;
-	bottom: -4px;
-	width: 40px;
-	height: 40px;
-	border-right: 4px solid #6f0;
-	border-bottom: 4px solid #6f0;
-}
+
+
 #mask {
 	position: absolute;
 	left: 0;
@@ -120,13 +94,11 @@ body {
 			<input type="file" id="file" accept="image/*" name="">
 		</label>
 	</div>
+	
 	<div class="page pageHide">
 		<canvas id="c"></canvas>
 		<div id="select">
 			<div class="left-top"></div>
-			<div class="right-top"></div>
-			<div class="left-bottom"></div>
-			<div class="right-bottom"></div>
 		</div>
 		<div id="mask">
 			<a href="javascript:;" id="saveBtn">保存</a>
@@ -134,13 +106,7 @@ body {
 		<img src="" id="img">
 	</div>	
 </div>
-<!--
-	本次公开课节选自《妙味移动端原生技法精粹揭秘》远程课程，想要了解详情的同学可以访问：http://www.miaov.com/index.php/news/newsDetail/nid/155 查看课程详情。三周的系统课程，带你玩转原生H5移动端web开发
--->
-<script type="text/javascript" src="MTween.js"></script>
 <script type="text/javascript">
-console.log('本次公开课节选自《妙味移动端原生技法精粹揭秘》远程课程，想要了解详情的同学可以访问：http://www.miaov.com/index.php/news/newsDetail/nid/155 查看课程详情。三周的系统课程，带你玩转原生H5移动端web开发');
- 
 /*
 答应大家的 https://github.com/motao314/mScroll 移动端滑屏组件
 	移动端图片上传裁切：
@@ -170,10 +136,10 @@ console.log('本次公开课节选自《妙味移动端原生技法精粹揭秘�
 	c.height = document.documentElement.clientHeight;
 	file.onchange = function(){
 		//console.log(this.files[0]);
-		if(this.files[0].size > maxSize){
-			alert("对不起，您传的文件有点太大了");
-			return;
-		}
+//		if(this.files[0].size > maxSize){
+//			alert("对不起，您传的文件有点太大了");
+//			return;
+//		}
 		var reader = new FileReader();
 		reader.onload = function(e){
 			//console.log(e.target.result);
