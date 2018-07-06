@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>HLMT5中input实现多种文件上传,视频上传,图片上传，调用手机摄像头，照相机，相册功能</title>
+</head>
+<style>
+
+</style>
+<body>
+<input type="file" accept="image/*" capture="camera"><br /><br />
+<input type="file" accept="video/*" capture="camcorder"><br /><br />
+<input type="file" accept="audio/*" capture="microphone"><br /><br />
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+
+                $('#blah').attr('src', e.target.result);
+
+            }
+
+            reader.readAsDataURL(input.files[0]);
+
+        }
+
+    }
+
+    $("#imgInp").change(function(){
+
+        readURL(this);
+
+    });
+</script>
+
+</html>
