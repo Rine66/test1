@@ -26,6 +26,8 @@ border-right: 1px solid red;
 		<input type="number" id="" value="" />
 		<input type="number" id="" value="" />
 		
+		<input type="number" id="b" onkeyup="document.getElementById('b').value=this.value.replace(/./g,'*');" />
+		
 		<input type="password" id="loginName"  value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='password' if (value ==''){value='请输入手机号码'}"/>
 		
 		
