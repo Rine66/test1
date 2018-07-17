@@ -6,18 +6,11 @@
 		<title></title>
 		<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<style> 
-.cc
-{
-width: 30px;
-border: 1px solid red;
-/*border-right: none ;*/
-}
-
-input[type=number]:last-child
-{
-border-right: 1px solid red;
-}
-</style>
+		.cc{
+			width: 30px;
+			border: 1px solid red;
+		}
+		</style>
 	</head>
 	<body>
 		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" autofocus="autofocus" />
@@ -28,16 +21,11 @@ border-right: 1px solid red;
 		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
 		
 		<input type="tel" class="" value=""   />
-		<input type="text" pattern="\d*" maxlength="2">
-		
-		<input type="text" pattern="[0-9]*">
-		 <input type="number" >
-		 <input type="password"  pattern="[0-9]*"  maxlength="2">
+		<input type="text" pattern="\d*" maxlength="2"><!-- 一样效果:pattern="[0-9]*"-->
+		<!--一直都是数字-->
+		<input type="number" >
 		 <!--<input type="number" onKeyDown="if(this.value.length==2) return false;" />-->
-		<!--<input type="password" id="loginName"  value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='password' if (value ==''){value='请输入手机号码'}"/>
-		
-		
-		<input type="text" id="loginName" name="loginName" value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='text' if (value ==''){value='请输入手机号码'}"/>-->
+		<input type="password"  value="" onfocus="this.type='number'" onblur="this.type='password'"/>
 
 <div id="d">
 	
@@ -53,6 +41,7 @@ border-right: 1px solid red;
 			$("#cc").val(n);
 			$("#d").text(num);
 		})*/
+		//聚焦
 //		$(".cc:first").focus();
 		$(".cc").keydown(function(){
 			if($(this).val().length>=1){
