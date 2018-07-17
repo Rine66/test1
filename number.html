@@ -4,10 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title></title>
+		<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<style> 
 input
 {
-width: 30px;
+/*width: 30px;*/
 border: 1px solid red;
 border-right: none ;
 }
@@ -19,19 +20,44 @@ border-right: 1px solid red;
 </style>
 	</head>
 	<body>
-		<!--<p>上传图片</p>
-		<input id="file" type="file" accept="image/*" capture="camera"/>-->
-		<input type="password" id="" value="" />
+		<!--<input type="password" id="" value="" />
 		<input type="password" id="" value="" />
 		<input type="number" id="" value="" />
-		<input type="number" id="" value="" />
+		<input type="number" id="" value="" />-->
 		
-		<input type="number" id="b" onkeyup="document.getElementById('b').value=this.value.replace(/[0-9]/g,'*');" />
+		<!--<input type="number" id="cc" value="" />-->
+		<input type="number" id="cc" value="" />
 		
 		<input type="password" id="loginName"  value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='password' if (value ==''){value='请输入手机号码'}"/>
 		
 		
 		<input type="text" id="loginName" name="loginName" value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='text' if (value ==''){value='请输入手机号码'}"/>
 
+<div id="d">
+	
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*$("#cc").keyup(function(){
+			var num=$("#cc").val();
+			var n=num.replace(/[0-9]/g,"*");
+			console.log(n)
+			$(this).attr("type",'text');
+			$("#cc").val(n);
+			$("#d").text(num);
+		})*/
+		
+		$("#cc").focus(function(){
+			console.log("n");
+			$(this).attr("type",'password');
+		})
+		$("#cc").keyup(function(){
+			console.log("n2");
+			$(this).attr("type",'password');
+			console.log($(this).val());
+		})
+	})
+</script>
 	</body>
 </html>
