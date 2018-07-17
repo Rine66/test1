@@ -6,32 +6,33 @@
 		<title></title>
 		<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<style> 
-input
+.cc
 {
-/*width: 30px;*/
+width: 30px;
 border: 1px solid red;
-border-right: none ;
+/*border-right: none ;*/
 }
 
-input:last-child
+input[type=number]:last-child
 {
 border-right: 1px solid red;
 }
 </style>
 	</head>
 	<body>
-		<!--<input type="password" id="" value="" />
-		<input type="password" id="" value="" />
-		<input type="number" id="" value="" />
-		<input type="number" id="" value="" />-->
+		<input type="number" class="cc" value="" max="1"  autofocus="autofocus" />
+		<input type="number" class="cc" value="" max="1"  />
+		<input type="number" class="cc" value="" max="1"  />
+		<input type="number" class="cc" value="" max="1"  />
+		<input type="number" class="cc" value="" max="1"  />
+		<input type="number" class="cc" value="" max="1"  />
 		
-		<!--<input type="number" id="cc" value="" />-->
-		<input type="number" id="cc" value="" />
+		<input type="tel" class="" value="" max="1"  />
+		<input type="text" pattern="\d*" maxlength="2">
+		<!--<input type="password" id="loginName"  value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='password' if (value ==''){value='请输入手机号码'}"/>
 		
-		<input type="password" id="loginName"  value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='password' if (value ==''){value='请输入手机号码'}"/>
 		
-		
-		<input type="text" id="loginName" name="loginName" value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='text' if (value ==''){value='请输入手机号码'}"/>
+		<input type="text" id="loginName" name="loginName" value="请输入手机号码" onfocus="if (value =='请输入手机号码'){value =''} this.type='number'" onblur="this.type='text' if (value ==''){value='请输入手机号码'}"/>-->
 
 <div id="d">
 	
@@ -47,11 +48,21 @@ border-right: 1px solid red;
 			$("#cc").val(n);
 			$("#d").text(num);
 		})*/
-		$("#cc").focus();
-		$("#cc").keyup(function(){
-			console.log("n2");
+//		$(".cc:first").focus();
+		$(".cc").keydown(function(){
+			if($(this).val().length>=1){
+				return false;
+			}
+		})
+		$(".cc").keyup(function(){
 			$(this).attr("type",'password');
 			console.log($(this).val());
+			
+			var leng=$(this).val().length;
+			if(leng==1){
+				$(this).next().focus();
+			}
+			
 		})
 	})
 </script>
