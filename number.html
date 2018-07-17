@@ -13,19 +13,22 @@
 		</style>
 	</head>
 	<body>
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" autofocus="autofocus" />
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;"/>
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;"/>
-		<input type="number" class="cc" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
+		<!--<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;"  />
+		<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
+		<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />
+		<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;"/>
+		<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;"/>
+		<input type="number" class="" value="" max="1" onKeyDown="if(this.value.length>=1) return false;" />-->
 		
 		<input type="tel" class="" value=""   />
 		<input type="text" pattern="\d*" maxlength="2"><!-- 一样效果:pattern="[0-9]*"-->
 		<!--一直都是数字-->
 		<input type="number" >
 		 <!--<input type="number" onKeyDown="if(this.value.length==2) return false;" />-->
-		<input type="password"  value="" onfocus="this.type='number'" onblur="this.type='password'"/>
+		<input type="password" class="cc"  value="" onfocus="this.type='number'" onblur="this.type='password'" maxlength="1" autofocus="autofocus"/>
+		<input type="password" class="cc"  value="" onfocus="this.type='number'" onblur="this.type='password'" maxlength="1" />
+		<input type="password" class="cc"  value="" onfocus="this.type='number'" onblur="this.type='password'" maxlength="1" />
+		<input type="password" class="cc"  value="" onfocus="this.type='number'" onblur="this.type='password'" maxlength="1" />
 
 <div id="d">
 	
@@ -43,13 +46,14 @@
 		})*/
 		//聚焦
 //		$(".cc:first").focus();
-		$(".cc").keydown(function(){
+
+		/*$(".cc").keydown(function(){
 			if($(this).val().length>=1){
 				return false;
 			}
-		})
+		})*/
 		$(".cc").keyup(function(){
-			$(this).attr("type",'password');
+//			$(this).attr("type",'password');
 			console.log($(this).val());
 			
 			var leng=$(this).val().length;
