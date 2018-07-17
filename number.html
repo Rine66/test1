@@ -47,11 +47,7 @@ border-right: 1px solid red;
 			$("#cc").val(n);
 			$("#d").text(num);
 		})*/
-		
-		$("#cc").focus(function(){
-			console.log("n");
-			$(this).attr("type",'password');
-		})
+		$("#cc").focus();
 		$("#cc").keyup(function(){
 			console.log("n2");
 			$(this).attr("type",'password');
