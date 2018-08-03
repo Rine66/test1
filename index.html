@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>字体</title>
+	<style type="text/css">
+		html{font-size:85.5%;}  /*根字体发生变化时候,rem单位的字体也会自动相应的发生变化*/
+		@media only screen and (max-width:750px ) {
+			html{font-size:  72.5%;}
+		}
+		@media only screen and (min-width: 550px) and (max-width: 640px) {
+			html{font-size: 50.5%;}
+		}
+		@media only screen and (min-width: 320px) and (max-width: 549px) {
+			html{font-size: 38.5%;}
+		}
+		@media only screen and (max-width: 319px) {
+			html{font-size: 20.5%;}
+		}
+		
+		body{font-size: 2.2rem;/*font-size: 16px;*/}
+	</style>
+</head>
+<body>
+	<!--http://3g.163.com/tech/article/DO9CDETE00097U82.html  可参考学习-->
+	
+	<!--rem是指根元素的字体大小，em是指父级元素字体的大小。-->
+	<p>fdsdfaf</p>
+	<p>滚动滚动地方方式方式方式</p>
+</body>
+</html>
