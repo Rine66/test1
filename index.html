@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<script type="text/javascript">
+			var ua = navigator.userAgent.toLowerCase();
+		　　var isWeixin = ua.indexOf('micromessenger') != -1;
+		　　if (isWeixin) {
+			  alert("微信中打开");
+//		   　　 return true;
+		　　}else{
+			  alert("微信中打开NO");
+//		   　　 return false;      
+		　　}
+		</script>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			body{
+				background: #edf0f1cc;
+			}
+			.contain{
+				margin: 0 auto;
+				max-width:640px;
+				min-width:320px;
+				height: 100%;
+			}
+			.icon{
+				padding-top: 10%;
+				text-align: center;
+				margin-bottom: 20%;
+			}
+			.icon img{
+				width: 60%;
+			}
+			a{text-decoration: none;}
+			.load{
+	            border-radius: 7px;
+			    width: 280px;
+			    margin: 0 auto;
+			    margin-bottom: 20px;
+			    padding: 10px;
+			    border: 1px solid #2baae5;
+			    display: block;
+			   
+			}
+			.load span{
+		        font-weight: bold;
+			    color: #27a7e1;
+			    margin-left: 100px;
+			}
+			.load:hover span{
+		        color: #FFF;
+			}
+			.icon1{
+				 background: url(img/img2_1.png) no-repeat 70px 4px #FFF;
+			    background-size: 10%;
+			}
+			.icon1:hover{
+		        background: url(img/img2_2.png) no-repeat 70px 4px #2baae5;
+		        background-size: 10%;
+			}
+			.icon2{
+				 background: url(img/img1_1.png) no-repeat 70px 4px #FFF;
+			    background-size: 9%;
+			}
+			.icon2:hover{
+		        background: url(img/img1_2.png) no-repeat 70px 4px #2baae5;
+		        background-size: 9%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contain">
+			<div  class="icon">
+				<img src="img/logo.png"/>
+			</div>
+			<a class="load icon1" href="itms-apps://itunes.apple.com/cn/app/鸣智智充/id1406237764?l=zh&mt=8">
+				<span>iphone下载</span>
+			</a>
+			<a class="load icon2" href="https://gx.mzzckj.com/download/data/mzzcapp.apk?vr=1.1.1">
+				<span>Android下载</span>
+			</a>
+		</div>
+	</body>
+</html>
